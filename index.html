@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yujin Kim, Ph.D. — Immune Engineering &amp; Nanomedicine</title>
+  <meta name="description" content="Yujin Kim, Ph.D. — Postdoctoral Research Fellow at the University of Michigan working on immune system engineering, LNP-mRNA delivery, and cancer immunotherapy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=19" />
+</head>
+<body data-page="home">
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html">Yujin Kim</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" data-page="home" href="index.html">Home</a>
+        <a class="nav__link" data-page="about" href="about.html">About</a>
+        <a class="nav__link" data-page="publications" href="publications.html">Publications</a>
+        <a class="nav__link" data-page="contact" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-band">
+      <div class="container">
+        <section id="hero" class="hero" aria-label="Introduction"></section>
+      </div>
+    </div>
+
+    <div class="container container--research">
+      <section id="interests" class="section--tight"></section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>© <span id="year"></span> Yujin Kim</span>
+      <span>University of Michigan, Ann Arbor</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/nav.js"></script>
+  <script src="js/render-profile.js"></script>
+</body>
+</html>

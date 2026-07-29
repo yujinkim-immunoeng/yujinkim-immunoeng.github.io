@@ -1,0 +1,160 @@
+{
+  "name": "Yujin Kim, Ph.D.",
+  "title": "Postdoctoral Research Fellow",
+  "department": "Department of Pharmaceutical Sciences",
+  "institution": "University of Michigan, Ann Arbor",
+  "address": "2800 Plymouth Rd, NCRC B20-301W, Ann Arbor, MI 48109",
+  "map_query": "NCRC Building 20, Ann Arbor, MI 48109",
+  "email": [
+    "kimyujin@umich.edu",
+    "yujin01270@gmail.com"
+  ],
+  "tagline": "I am an immune engineer designing nanobiomaterials that deliver biopharmaceuticals to immune cells and reprogram immune function to overcome refractory diseases.",
+  "research_keywords": [
+    "Immune Engineering",
+    "Vaccine",
+    "Immunotherapy",
+    "Nanomedicine",
+    "Gene Delivery"
+  ],
+  "links": {
+    "google_scholar": "https://scholar.google.com/citations?user=-SJHxTsAAAAJ&hl=en",
+    "orcid": "https://orcid.org/0000-0002-7186-221X",
+    "linkedin": "https://www.linkedin.com/in/yujinkim93"
+  },
+  "bio": "I am a postdoctoral research fellow in the Department of Pharmaceutical Sciences at the University of Michigan, Ann Arbor.\n\nI received my Ph.D. in 2021 from the Department of Biological Sciences at KAIST, under the supervision of Prof. Sangyong Jon. During my doctoral training, I added materials design and engineering to a background in the life sciences, developing nanomaterial-based vaccines and immunotherapeutics.\n\nSince joining Prof. James J. Moon's group at the University of Michigan in 2023, I have deepened the immunological reasoning behind the materials I design and developed the independence to lead my own line of research in in vivo immune cell engineering. Together, these two stages define how I work as an immune engineer at the interface of immunology, nanotechnology, and biomedical engineering.",
+  "bio_links": {
+    "Prof. Sangyong Jon": "http://www.bionanolab.co.kr/main/",
+    "Prof. James J. Moon": "https://moonlab.engin.umich.edu/"
+  },
+  "education": [
+    {
+      "degree": "Ph.D. in Biological Sciences",
+      "institution": "Korea Advanced Institute of Science and Technology (KAIST)",
+      "years": "2015–2021",
+      "advisor": "Prof. Sangyong Jon"
+    },
+    {
+      "degree": "B.S. in Life Sciences",
+      "second_degree": "B.E. in Integrated Biotechnology",
+      "institution": "Sogang University",
+      "years": "2011–2015",
+      "note": "Graduated Summa Cum Laude"
+    }
+  ],
+  "career": [
+    {
+      "position": "Postdoctoral Research Fellow",
+      "institution": "Department of Pharmaceutical Sciences, University of Michigan, Ann Arbor",
+      "years": "Jun 2023–Present",
+      "advisor": "Prof. James J. Moon"
+    },
+    {
+      "position": "Postdoctoral Researcher",
+      "institution": "Life Science Research Institute, KAIST",
+      "years": "Mar 2021–May 2023",
+      "advisor": "Prof. Sangyong Jon"
+    }
+  ],
+  "research_interests": [
+    {
+      "title": "Nanomaterial-based Delivery Platforms",
+      "description": "Designing biocompatible nanobiomaterials as delivery platforms",
+      "icon": "nanoparticle"
+    },
+    {
+      "title": "Delivery of Biopharmaceuticals",
+      "description": "Delivering mRNA, siRNA, peptides, and other biopharmaceuticals to target cells and tissues",
+      "icon": "delivery"
+    },
+    {
+      "title": "In Vivo Immune Cells Engineering",
+      "description": "Engineering dendritic cells, T cells, and macrophages directly in the body to reprogram their function",
+      "icon": "immune-cell"
+    },
+    {
+      "title": "Development of Vaccine and Immunotherapy",
+      "description": "Translating these platforms into therapies for cancer, infection, and autoimmunity",
+      "icon": "vaccine"
+    }
+  ],
+  "research_interests_tagline": "Developing novel nano-biopharmaceuticals to overcome intractable diseases",
+  "research_funding": [
+    {
+      "years": "2023–2024",
+      "program": "Post-Doctoral Overseas Training Fellowship, National Research Foundation of Korea (NRF)",
+      "role": "Principal Investigator",
+      "title": "Development of Biocompatible Nanovaccines for the Treatment of Autoimmune Diseases by Inducing Tolerogenic Dendritic Cells",
+      "amount": "$35,000 / year"
+    },
+    {
+      "years": "2022–2023",
+      "program": "Basic Science Research Program, National Research Foundation of Korea (NRF)",
+      "role": "Principal Investigator",
+      "title": "Tumor-Associated Macrophage-Targeting Nanomedicine for Next-Generation Cancer Immunotherapy",
+      "amount": "$58,000 / year"
+    }
+  ],
+  "honors_awards": [
+    {
+      "year": "2026",
+      "award": "The Early-Career Rising KBMES Star Award",
+      "detail": "Korean-American Biomedical Engineering Society (KBMES)"
+    },
+    {
+      "year": "2025",
+      "award": "KASBP Fellowship Award",
+      "detail": "2025 Fall Korean American Society in Biotech and Pharmaceuticals (KASBP) Symposium"
+    },
+    {
+      "year": "2025",
+      "award": "Selected Postdoc Presenter with Travel Support",
+      "detail": "US–Korea Conference (UKC) 2025"
+    },
+    {
+      "year": "2024",
+      "award": "Research Travel Grant",
+      "detail": "Korea Foundation for Women in Science, Engineering and Technology (WISET)"
+    },
+    {
+      "year": "2022",
+      "award": "Best Oral Presentation Award",
+      "detail": "2022 KAI International Meeting"
+    },
+    {
+      "year": "2021",
+      "award": "Academic Award",
+      "detail": "2021 KAIST Life Science Research Institute Postdoctoral Symposium"
+    },
+    {
+      "year": "2020",
+      "award": "Excellent Poster Award",
+      "detail": "2020 KSMCB International Conference"
+    },
+    {
+      "year": "2018",
+      "award": "Outstanding Poster Presentation Award",
+      "detail": "2018 1st BTDS–KSMI–KSNM Integration Event"
+    },
+    {
+      "year": "2017",
+      "award": "Outstanding Poster Presentation Award",
+      "detail": "2017 5th Meeting of the Korean Society for Nanomedicine"
+    },
+    {
+      "year": "2014",
+      "award": "Top 1% Academic Excellence Award",
+      "detail": "Sogang University"
+    },
+    {
+      "year": "2013–2015",
+      "award": "National Scholarship for Science and Engineering",
+      "detail": "Korea Student Aid Foundation"
+    },
+    {
+      "year": "2011–2015",
+      "award": "Honors Scholarship",
+      "detail": "Sogang University"
+    }
+  ]
+}

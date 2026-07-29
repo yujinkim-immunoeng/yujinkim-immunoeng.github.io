@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Microsoft Office temporary/lock files
+~$*
+
+# Editor/OS cruft
+Thumbs.db
+*.swp
+
+# Source materials — kept locally, not tracked in the repo
+Photo.JPG
+Curriculum Vitae_Yujin Kim.docx
+PROJECT_BRIEF.md
+
+# Working notes for Claude — local only, not part of the published site
+CLAUDE.md
