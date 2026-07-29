@@ -13,5 +13,6 @@ Photo.JPG
 Curriculum Vitae_Yujin Kim.docx
 PROJECT_BRIEF.md
 
-# Working notes for Claude — local only, not part of the published site
+# Local tooling config and working notes — not part of the published site
 CLAUDE.md
+.claude/
