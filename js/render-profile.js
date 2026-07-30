@@ -173,8 +173,9 @@
             '<p class="interest-card__desc">' + esc(t.description) + '</p>' +
             '</article>';
         }).join("") +
-        '</div>' +
-        '<p class="interests__more"><a href="research.html">View research in detail →</a></p>';
+        '</div>';
+      // No "View research in detail →" link: the Research page is hidden.
+      // See CLAUDE.md §8b — restoring it is this one line coming back.
       reveal(interests);
     }
 
