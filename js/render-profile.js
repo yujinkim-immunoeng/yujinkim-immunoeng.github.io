@@ -1,30 +1,40 @@
-/* Fetches data/profile.json and renders the About, Research, and Contact
-   pages. The page to render is determined by <body data-page="...">.
-   Content lives entirely in the JSON file so it stays editable without
-   touching this code. */
+/* Fetches data/profile.json and renders the Home, About, Research, and Contact
+   pages; News comes from its own data/news.json. The page to render is
+   determined by <body data-page="...">. Content lives entirely in the JSON
+   files so it stays editable without touching this code. */
 (function () {
   "use strict";
 
   var DATA_URL = "data/profile.json";
+  var NEWS_URL = "data/news.json";
 
   document.addEventListener("DOMContentLoaded", function () {
-    fetch(DATA_URL)
+    var page = document.body.getAttribute("data-page");
+    // News is the one page that does not read the profile.
+    if (page === "news") {
+      load(NEWS_URL, renderNews);
+      return;
+    }
+    load(DATA_URL, function (data) {
+      if (page === "home") renderHome(data);
+      else if (page === "about") renderAbout(data);
+      else if (page === "research") renderResearch(data);
+      else if (page === "contact") renderContact(data);
+    });
+  });
+
+  function load(url, done) {
+    fetch(url)
       .then(function (res) {
-        if (!res.ok) throw new Error("Failed to load " + DATA_URL + " (" + res.status + ")");
+        if (!res.ok) throw new Error("Failed to load " + url + " (" + res.status + ")");
         return res.json();
       })
-      .then(function (data) {
-        var page = document.body.getAttribute("data-page");
-        if (page === "home") renderHome(data);
-        else if (page === "about") renderAbout(data);
-        else if (page === "research") renderResearch(data);
-        else if (page === "contact") renderContact(data);
-      })
+      .then(done)
       .catch(function (err) {
         console.error(err);
         showError(err.message);
       });
-  });
+  }
 
   /* ---------- helpers ---------- */
   function el(id) { return document.getElementById(id); }
@@ -45,6 +55,21 @@
       escaped = escaped.replace(re,
         '<a href="' + esc(map[name]) + '" target="_blank" rel="noopener">' +
         esc(name) + '</a>');
+    });
+    return escaped;
+  }
+  /* Wrap known phrases in an accent span. Same contract as linkify(): runs on
+     already-escaped text, escapes the needle before building the regex, and the
+     only markup introduced is the span built here. Safe to compose with
+     linkify() because neither can match inside what the other emits — the link
+     names are people, the highlights are research phrases. A future highlight
+     that overlaps a linked name would break that, so keep them disjoint. */
+  function highlight(escaped, phrases) {
+    if (!Array.isArray(phrases)) return escaped;
+    phrases.forEach(function (phrase) {
+      var re = new RegExp(esc(phrase).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g");
+      escaped = escaped.replace(re,
+        '<span class="prose__accent">' + esc(phrase) + '</span>');
     });
     return escaped;
   }
@@ -148,7 +173,8 @@
             '<p class="interest-card__desc">' + esc(t.description) + '</p>' +
             '</article>';
         }).join("") +
-        '</div>';
+        '</div>' +
+        '<p class="interests__more"><a href="research.html">View research in detail →</a></p>';
       reveal(interests);
     }
 
@@ -165,7 +191,7 @@
         '<div class="prose">' +
           paras.map(function (p, i) {
             return '<p' + (i === 0 ? ' class="prose__lead"' : '') + '>' +
-              linkify(esc(p), d.bio_links) + '</p>';
+              highlight(linkify(esc(p), d.bio_links), d.bio_highlights) + '</p>';
           }).join("") +
         '</div>' +
         (isDraft(d.bio_status)
@@ -255,12 +281,25 @@
   }
 
   /* ---------- Research ---------- */
+
+  /* A real figure once `figure` names one, otherwise the theme's own line icon
+     on the same tinted panel — so a card without artwork still reads as
+     finished rather than as a placeholder. */
+  function themeFigure(t) {
+    if (t.figure) {
+      return '<img class="theme__figure theme__figure--image" src="' + esc(t.figure) +
+        '" alt="' + esc(t.figure_alt || t.title) + '" loading="lazy" />';
+    }
+    return '<div class="theme__figure theme__figure--icon" aria-hidden="true">' +
+      (INTEREST_ICONS[t.icon] || "") + '</div>';
+  }
+
   function renderResearch(d) {
     var grid = el("themes");
     if (!grid || !Array.isArray(d.research_themes)) return;
     grid.innerHTML = d.research_themes.map(function (t) {
       return '<article class="theme">' +
-        '<div class="theme__figure">Figure — placeholder</div>' +
+        themeFigure(t) +
         '<div class="theme__body">' +
           '<h3 class="theme__title">' + esc(t.title) + '</h3>' +
           '<p class="theme__desc">' + esc(t.description) + '</p>' +
@@ -281,6 +320,87 @@
         '</div>';
       reveal(teach);
     }
+  }
+
+  /* ---------- News ---------- */
+
+  var MONTHS = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+
+  /* "2023-06" -> "June 2023". The date is the paper's issue date, so it reads
+     as the tail of a citation ("ACS Nano · June 2023") rather than a timestamp. */
+  function newsDate(iso) {
+    var m = /^(\d{4})-(\d{2})/.exec(String(iso == null ? "" : iso));
+    return m ? MONTHS[parseInt(m[2], 10) - 1] + " " + m[1] : String(iso == null ? "" : iso);
+  }
+
+  /* A supplied logo once one exists, otherwise a tile built from `thumb` —
+     "ACS Nano" becomes ACS over NANO. Same ship-now-drop-art-in-later pattern
+     as themeFigure(). */
+  function newsThumb(n) {
+    if (n.image) {
+      return '<img class="news-item__thumb news-item__thumb--image" src="' +
+        esc(n.image) + '" alt="' + esc(n.image_alt || (n.thumb || "") + " logo") +
+        '" loading="lazy" />';
+    }
+    var words = String(n.thumb || "Press").trim().split(/\s+/);
+    return '<div class="news-item__thumb news-item__thumb--tile" aria-hidden="true">' +
+      '<span class="news-item__tile-main">' + esc(words[0]) + '</span>' +
+      (words.length > 1
+        ? '<span class="news-item__tile-sub">' + esc(words.slice(1).join(" ")) + '</span>'
+        : "") +
+      '</div>';
+  }
+
+  /* One outlet link. `language` and `kind` become a small trailing hint so a
+     reader knows a link is Korean, or a video, before following it. */
+  function outletLink(o) {
+    var hint = [o.kind === "video" ? "video" : "", o.language]
+      .filter(Boolean)
+      .map(esc)
+      .join(", ");
+    return '<a class="news-outlet" href="' + esc(o.url) + '" target="_blank" rel="noopener">' +
+      esc(o.name) +
+      (hint ? ' <span class="news-outlet__hint">' + hint + '</span>' : "") +
+      '</a>';
+  }
+
+  /* A card groups every outlet that covered one paper — the Korean articles all
+     restate the same press release, so listing them separately would repeat the
+     same headline four deep. The card is a <div>, not an <a>: it holds many
+     links. */
+  function newsItem(n) {
+    // Journal first, then issue month — "ACS Nano · June 2023".
+    var meta = [n.related, newsDate(n.date)].filter(Boolean).map(esc).join(" · ");
+    var outlets = Array.isArray(n.outlets) ? n.outlets : [];
+
+    return '<div class="news-item">' +
+      newsThumb(n) +
+      '<div class="news-item__body">' +
+        '<p class="news-item__headline">' + esc(n.headline) + '</p>' +
+        (meta ? '<div class="news-item__meta">' + meta + '</div>' : "") +
+        (outlets.length
+          ? '<div class="news-item__outlets">' + outlets.map(outletLink).join("") + '</div>'
+          : "") +
+      '</div>' +
+      '</div>';
+  }
+
+  function renderNews(d) {
+    var wrap = el("news");
+    if (!wrap) return;
+    var items = (Array.isArray(d.press) ? d.press : []).slice();
+    if (!items.length) {
+      wrap.innerHTML = '<p class="text-secondary">No coverage listed yet.</p>';
+      reveal(wrap);
+      return;
+    }
+    // ISO dates sort correctly as plain strings; newest first.
+    items.sort(function (a, b) {
+      return String(b.date).localeCompare(String(a.date));
+    });
+    wrap.innerHTML = '<div class="news-list">' + items.map(newsItem).join("") + '</div>';
+    reveal(wrap);
   }
 
   /* Inline SVG so the icons need no external requests or build step.
@@ -355,12 +475,20 @@
       '</p>';
   }
 
-  /* "email" may be a single address or an array of addresses. */
+  /* "email" may be a single address, or an array of addresses, or an array of
+     {label, address} — the labelled form adds a Work / Personal chip. Bare
+     strings still work, so older data needs no migration. */
   function emailsHtml(email) {
     var list = Array.isArray(email) ? email : (email ? [email] : []);
     return '<div class="contact-links">' +
-      list.map(function (addr) {
-        return '<a href="mailto:' + esc(addr) + '">' + esc(addr) + '</a>';
+      list.map(function (e) {
+        var addr = typeof e === "string" ? e : (e && e.address);
+        if (!addr) return "";
+        var label = typeof e === "string" ? "" : (e && e.label);
+        return '<span class="contact-email">' +
+          '<a href="mailto:' + esc(addr) + '">' + esc(addr) + '</a>' +
+          (label ? '<span class="contact-email__tag">' + esc(label) + '</span>' : "") +
+          '</span>';
       }).join("") +
       '</div>';
   }

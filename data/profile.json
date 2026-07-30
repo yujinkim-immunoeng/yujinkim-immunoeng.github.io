@@ -6,27 +6,37 @@
   "address": "2800 Plymouth Rd, NCRC B20-301W, Ann Arbor, MI 48109",
   "map_query": "NCRC Building 20, Ann Arbor, MI 48109",
   "email": [
-    "kimyujin@umich.edu",
-    "yujin01270@gmail.com"
+    {
+      "label": "Work",
+      "address": "kimyujin@umich.edu"
+    },
+    {
+      "label": "Personal",
+      "address": "yujin01270@gmail.com"
+    }
   ],
   "tagline": "I am an immune engineer designing nanobiomaterials that deliver biopharmaceuticals to immune cells and reprogram immune function to overcome refractory diseases.",
   "research_keywords": [
     "Immune Engineering",
-    "Vaccine",
-    "Immunotherapy",
     "Nanomedicine",
-    "Gene Delivery"
+    "Drug Delivery",
+    "Nucleic Acid Therapeutics",
+    "Vaccine",
+    "Immunotherapy"
   ],
   "links": {
     "google_scholar": "https://scholar.google.com/citations?user=-SJHxTsAAAAJ&hl=en",
     "orcid": "https://orcid.org/0000-0002-7186-221X",
     "linkedin": "https://www.linkedin.com/in/yujinkim93"
   },
-  "bio": "I am a postdoctoral research fellow in the Department of Pharmaceutical Sciences at the University of Michigan, Ann Arbor.\n\nI received my Ph.D. in 2021 from the Department of Biological Sciences at KAIST, under the supervision of Prof. Sangyong Jon. During my doctoral training, I added materials design and engineering to a background in the life sciences, developing nanomaterial-based vaccines and immunotherapeutics.\n\nSince joining Prof. James J. Moon's group at the University of Michigan in 2023, I have deepened the immunological reasoning behind the materials I design and developed the independence to lead my own line of research in in vivo immune cell engineering. Together, these two stages define how I work as an immune engineer at the interface of immunology, nanotechnology, and biomedical engineering.",
+  "bio": "I am a postdoctoral research fellow in the Department of Pharmaceutical Sciences at the University of Michigan, Ann Arbor.\n\nI received my Ph.D. in 2021 from the Department of Biological Sciences at KAIST, under the supervision of Prof. Sangyong Jon. During my doctoral training, I added materials design and engineering to a background in the life sciences, developing nanomaterial-based vaccines and immunotherapeutics.\n\nSince joining Prof. James J. Moon's group at the University of Michigan in 2023, I have deepened the immunological reasoning behind the materials I design and developed the independence to lead my own line of research in in vivo immune cell engineering.\n\nTogether, these two stages define how I work as an immune engineer at the interface of immunology, nanotechnology, and biomedical engineering.",
   "bio_links": {
     "Prof. Sangyong Jon": "http://www.bionanolab.co.kr/main/",
     "Prof. James J. Moon": "https://moonlab.engin.umich.edu/"
   },
+  "bio_highlights": [
+    "immune engineer at the interface of immunology, nanotechnology, and biomedical engineering"
+  ],
   "education": [
     {
       "degree": "Ph.D. in Biological Sciences",
@@ -58,27 +68,49 @@
   ],
   "research_interests": [
     {
-      "title": "Nanomaterial-based Delivery Platforms",
-      "description": "Designing biocompatible nanobiomaterials as delivery platforms",
+      "title": "Engineering Nanomaterial Delivery Platforms",
+      "description": "Designing lipid- and protein-based nanoparticles through rational and data-driven design",
       "icon": "nanoparticle"
     },
     {
-      "title": "Delivery of Biopharmaceuticals",
-      "description": "Delivering mRNA, siRNA, peptides, and other biopharmaceuticals to target cells and tissues",
+      "title": "Targeted Delivery of Immune Modulators",
+      "description": "Directing nucleic acids, antigens, and immunomodulatory agents to the organs and cells where they act",
       "icon": "delivery"
     },
     {
-      "title": "In Vivo Immune Cells Engineering",
+      "title": "In Vivo Immune Cell Engineering",
       "description": "Engineering dendritic cells, T cells, and macrophages directly in the body to reprogram their function",
       "icon": "immune-cell"
     },
     {
-      "title": "Development of Vaccine and Immunotherapy",
-      "description": "Translating these platforms into therapies for cancer, infection, and autoimmunity",
+      "title": "Development of Vaccines and Immunotherapies",
+      "description": "Translating these platforms into preventive and therapeutic strategies for cancer, infection, and autoimmunity",
       "icon": "vaccine"
     }
   ],
-  "research_interests_tagline": "Developing novel nano-biopharmaceuticals to overcome intractable diseases",
+  "research_interests_tagline": "I engineer nanomaterials to control where and how the immune system is instructed in vivo.",
+  "research_themes": [
+    {
+      "title": "Nanomaterial Platforms for Immune Delivery",
+      "description": "Biocompatible nanomaterials — lipid nanoparticles, liposomes, and self-assembled protein nanostructures — engineered so that their physicochemical design governs where a payload travels and how the immune system reads it. Published work includes self-assembling protein nanobarrels that present antigen without a separate adjuvant.",
+      "icon": "nanoparticle"
+    },
+    {
+      "title": "Delivery of mRNA and Biopharmaceuticals",
+      "description": "Lipid nanoparticle design for mRNA and other biologics, focused on the steps that limit potency in the body: cellular uptake, endosomal escape, and tissue distribution. Ongoing work extends this to computational and AI-guided approaches to nanoparticle design.",
+      "icon": "delivery"
+    },
+    {
+      "title": "In Vivo Immune Cell Engineering",
+      "description": "Reprogramming dendritic cells, T cells, and macrophages directly inside the body rather than ex vivo, using targeted delivery to reach a chosen immune-cell population — including in situ approaches to chimeric antigen receptor macrophages for solid tumors.",
+      "icon": "immune-cell"
+    },
+    {
+      "title": "Vaccines and Immunotherapy for Intractable Disease",
+      "description": "Translating these platforms into therapies: cancer nanovaccines sequenced with checkpoint blockade, neoantigen- and tumor-stroma-targeted vaccines, modular vaccine platforms against infectious disease, and nanomedicines that calm autoimmune inflammation.",
+      "icon": "vaccine"
+    }
+  ],
   "research_funding": [
     {
       "years": "2023–2024",
@@ -119,7 +151,7 @@
     {
       "year": "2022",
       "award": "Best Oral Presentation Award",
-      "detail": "2022 KAI International Meeting"
+      "detail": "2022 Korean Association of Immunologists (KAI) International Meeting"
     },
     {
       "year": "2021",
@@ -129,7 +161,7 @@
     {
       "year": "2020",
       "award": "Excellent Poster Award",
-      "detail": "2020 KSMCB International Conference"
+      "detail": "2020 Korean Society for Molecular and Cellular Biology (KSMCB) International Conference"
     },
     {
       "year": "2018",

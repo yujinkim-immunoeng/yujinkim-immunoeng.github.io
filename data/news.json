@@ -1,0 +1,93 @@
+{
+  "note": "Press coverage shown on news.html, grouped one entry per paper. To add coverage of a new paper, copy an entry anywhere in the array — the renderer sorts by date, newest first. Required: `date` (YYYY-MM, the paper's issue date from the CV — it renders as the tail of a citation, not as the press date) and `headline` (written in English; the site is English-only). Optional: `related` (the journal name), `image` (the paper's TOC figure under assets/news/) with `image_alt` describing the graphic, and `thumb` (text for a generated tile when there is no image, e.g. \"ACS Nano\" renders as ACS over NANO). Each entry in `outlets` needs `name` and `url`; add `kind`: \"video\" for broadcast segments. (`language` is also supported but deliberately unused — labelling the Korean articles was dropped.) To add one more outlet to a paper already listed, just append to its `outlets` array.",
+  "press": [
+    {
+      "date": "2023-06",
+      "headline": "Nanovaccine targeting cancer-associated fibroblasts proves effective across solid tumors",
+      "related": "ACS Nano",
+      "image": "assets/news/acs-nano-2023-fap-nanovaccine.png",
+      "image_alt": "ACS Nano cover graphic: a lipid nanoparticle displaying fibroblast activation protein epitope peptides and encapsulating a CpG adjuvant.",
+      "outlets": [
+        {
+          "name": "Medical Times",
+          "url": "https://www.medicaltimes.com/Mobile/News/NewsView.html?ID=1154035"
+        },
+        {
+          "name": "Medical Observer",
+          "url": "https://www.monews.co.kr/news/articleView.html?idxno=323876"
+        },
+        {
+          "name": "Medical World News",
+          "url": "https://medicalworldnews.co.kr/m/view.php?idx=1510955937"
+        },
+        {
+          "name": "Medifonews",
+          "url": "https://www.medifonews.com/news/article.html?no=179651"
+        },
+        {
+          "name": "BRIC Bio News",
+          "url": "https://www.ibric.org/bric/trend/bio-news.do?mode=view&articleNo=8880960"
+        }
+      ]
+    },
+    {
+      "date": "2021-06",
+      "headline": "Self-assembled protein nanobarrels yield an influenza vaccine that needs no adjuvant",
+      "related": "ACS Nano",
+      "image": "assets/news/acs-nano-2021-influenza-nanobarrel.png",
+      "image_alt": "ACS Nano cover graphic: a self-assembled protein nanobarrel presenting the influenza M2e antigen on its surface.",
+      "outlets": [
+        {
+          "name": "C&EN, American Chemical Society",
+          "url": "https://cen.acs.org/pharmaceuticals/vaccines/Bacterial-protein-eliminate-need-adjuvants/99/web/2021/06"
+        },
+        {
+          "name": "YTN Science",
+          "url": "https://youtu.be/CmQZIcDuIQk",
+          "kind": "video"
+        },
+        {
+          "name": "Science Times",
+          "url": "https://www.sciencetimes.co.kr/news/kaist-%EB%B2%94%EC%9A%A9%ED%98%95-%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%97%94%EC%9E%90-%EB%82%98%EB%85%B8-%EB%B0%B1%EC%8B%A0-%EA%B0%9C%EB%B0%9C/"
+        },
+        {
+          "name": "DT News 24",
+          "url": "https://www.dtnews24.com/news/articleView.html?idxno=707885"
+        },
+        {
+          "name": "Yonhap News via Science Times",
+          "url": "https://www.sciencetimes.co.kr/news/kaist-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B3%80%EC%9D%B4%EC%97%90%EB%8F%84-%EB%A9%B4%EC%97%AD-%EA%B0%80%EB%8A%A5%ED%95%9C-%EC%9D%B8%ED%94%8C%EB%A3%A8%EC%97%94%EC%9E%90-%EB%B0%B1%EC%8B%A0-%EA%B0%9C/"
+        }
+      ]
+    },
+    {
+      "date": "2020-08",
+      "headline": "Sequencing a nanoparticle cancer vaccine with checkpoint blockade suppresses tumor growth and relapse",
+      "related": "Angewandte Chemie International Edition",
+      "image": "assets/news/angew-2020-cancer-nanovaccine.png",
+      "image_alt": "Angewandte Chemie cover graphic: a lipid nanoparticle co-delivering a tumor peptide antigen and an immune adjuvant.",
+      "outlets": [
+        {
+          "name": "KAIST News",
+          "url": "https://www.kaist.ac.kr/news/html/news/?mode=V&mng_no=8390"
+        },
+        {
+          "name": "Seoul Economic Daily",
+          "url": "https://www.sedaily.com/NewsVIew/1Z41RUWAQ5"
+        },
+        {
+          "name": "Segye Ilbo",
+          "url": "https://m.segye.com/view/20200616516109"
+        },
+        {
+          "name": "The Korean Doctors' Weekly",
+          "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=2000066"
+        },
+        {
+          "name": "AI Times",
+          "url": "https://www.aitimes.kr/news/articleView.html?idxno=16725"
+        }
+      ]
+    }
+  ]
+}

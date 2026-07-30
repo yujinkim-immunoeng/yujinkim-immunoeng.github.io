@@ -12,6 +12,8 @@ Thumbs.db
 Photo.JPG
 Curriculum Vitae_Yujin Kim.docx
 PROJECT_BRIEF.md
+# Full-resolution paper figures; only the downscaled copies in assets/news/ ship
+source-figures/
 
 # Local tooling config and working notes — not part of the published site
 CLAUDE.md

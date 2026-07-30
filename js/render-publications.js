@@ -96,6 +96,11 @@
         journalLine += ' <span class="pub__meta">(' +
           (p.month ? esc(p.month) + " " : "") + esc(p.year) + ')</span>';
       }
+      // A cover / feature credit belongs with the citation, not down in the
+      // badge row. Only published entries have a journal line to hang it on.
+      if (isPub && p.special_notes) {
+        journalLine += ' <span class="pub__cover">· ' + esc(p.special_notes) + '</span>';
+      }
       journalLine = '<p class="pub__journal">' + journalLine + '</p>';
     }
 
@@ -106,10 +111,20 @@
     if (showMetrics && p.journal_ranking) {
       badges.push('<span class="badge badge--rank">' + esc(p.journal_ranking) + '</span>');
     }
+    // Driven by the data, not by the group — adding a DOI to any entry shows a
+    // chip. aria-label carries the title, since five bare "Link" chips tell a
+    // screen-reader user nothing.
+    if (p.doi) {
+      badges.push('<a class="badge badge--link" href="https://doi.org/' + esc(p.doi) +
+        '" target="_blank" rel="noopener" aria-label="Link to ' + esc(p.title) +
+        '">Link ↗</a>');
+    }
     // Status wording and the generalized-title note read as one phrase, so they
     // share a single span — a second span could wrap away from it.
     var noteParts = [];
-    if (p.special_notes) noteParts.push(p.special_notes);
+    // Skip it only when the journal line above actually consumed it, so a
+    // published entry with no journal still shows its note rather than losing it.
+    if (p.special_notes && !(isPub && p.journal)) noteParts.push(p.special_notes);
     if (!isPub && titleNote) noteParts.push(titleNote);
     if (noteParts.length) {
       badges.push('<span class="pub__note">' + esc(noteParts.join(" · ")) + '</span>');
@@ -150,11 +165,19 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
-  /* Escape first, then bold every occurrence of the author's name. The name
-     has no special HTML chars, so matching post-escape is safe. */
+  /* Escape first, then bold every occurrence of the author's name, then raise
+     the CV symbols. Both run post-escape; neither the name nor † / * carries
+     special HTML meaning, and the tags introduced contain no symbols, so the
+     two passes cannot interfere. */
   function boldAuthor(authors) {
     var safe = esc(authors);
     var re = new RegExp(AUTHOR_NAME.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g");
-    return safe.replace(re, "<strong>" + AUTHOR_NAME + "</strong>");
+    return supSymbols(safe.replace(re, "<strong>" + AUTHOR_NAME + "</strong>"));
+  }
+
+  /* † (co-first) and * (co-corresponding) are footnote markers, so they belong
+     above the baseline as in the CV. A run of both is wrapped together. */
+  function supSymbols(escaped) {
+    return escaped.replace(/[†*]+/g, function (m) { return "<sup>" + m + "</sup>"; });
   }
 })();

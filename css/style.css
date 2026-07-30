@@ -93,8 +93,9 @@ img { max-width: 100%; display: block; }
 }
 
 .container--text { max-width: var(--max-text); }
-/* Contact needs room for the details + map side by side */
-.container--contact { max-width: 1000px; }
+/* Contact needs room for the details + map side by side, and enough width for
+   the street address to stay on one line */
+.container--contact { max-width: 1080px; }
 /* Publications is text-heavy — keep a comfortable reading measure */
 .container--pubs { max-width: 900px; }
 /* Research holds a 2-column card grid */
@@ -238,6 +239,19 @@ main h2::before {
   padding-left: 0;
   font-weight: 500;
 }
+/* Link chip — soft gold fill. It separates from the pale-burgundy IF badge by
+   hue rather than by weight; a solid burgundy fill was tried and pulled the eye
+   far too hard. The affordance arrives on hover instead of at rest. */
+a.badge--link {
+  background: var(--accent-2-light);
+  color: var(--accent-2);
+  transition: background 150ms ease, color 150ms ease;
+}
+a.badge--link:hover {
+  background: var(--accent-2);
+  color: #fff;
+  text-decoration: none;
+}
 
 /* -------------------------------------------------------------------------
    Hero (About)
@@ -297,16 +311,12 @@ main h2::before {
 .prose p { margin-bottom: var(--s3); }
 .prose__lead { font-size: 1.1rem; color: var(--text-primary); }
 .prose a { font-weight: 700; }
+/* Emphasis inside the bio. Burgundy at regular weight — gold was tried first
+   and Yujin preferred burgundy. The PI links in this same block are burgundy
+   *and bold*, so weight is the only thing separating the two; that was raised
+   and accepted. No font-weight here by request. */
+.prose__accent { color: var(--accent); }
 .prose p:last-child { margin-bottom: 0; }
-
-.philosophy {
-  border-left: 3px solid var(--accent);
-  padding: var(--s1) 0 var(--s1) var(--s3);
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: var(--text-primary);
-}
 
 .draft-note {
   font-size: 0.8rem;
@@ -380,14 +390,22 @@ main h2::before {
 }
 .theme__figure {
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, var(--accent-light), #F4EFE7);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
   border-bottom: 1px solid var(--border);
+}
+/* No artwork yet: the theme's own line icon on a soft tint, so the card reads
+   as designed rather than unfinished. Replaced by --image once a figure exists. */
+.theme__figure--icon {
+  background: linear-gradient(135deg, var(--accent-light), #F4EFE7);
+  color: var(--accent);
+}
+.theme__figure--icon svg { width: 44px; height: 44px; opacity: 0.85; }
+.theme__figure--image {
+  width: 100%;
+  object-fit: cover;
+  background: var(--accent-light);
 }
 .theme__body { padding: var(--s3); }
 .theme__title { font-size: 1.15rem; margin-bottom: var(--s1); }
@@ -414,11 +432,23 @@ main h2::before {
 }
 
 /* Research interests — four CV research fields, side by side on Home */
+/* First-person line under the Research Interests heading. Quotation marks make
+   it read as her own statement. A burgundy left rule was tried here and
+   reverted: every h2 already carries a burgundy bar above it (main h2::before),
+   and the two marks stacked into a broken L. Upright, not italic — Libre
+   Baskerville italic was tried on the hero tagline and rejected as hard to read.
+   A touch smaller than that tagline so the two don't compete. */
 .interest-grid__tagline {
   margin: 0 0 var(--s4) 0;
-  color: var(--text-secondary);
-  font-size: 1.02rem;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-primary);
 }
+/* Generated, not baked into the JSON: the quotes are presentation, so the data
+   stays a clean sentence and assistive tech treats them as decorative. */
+.interest-grid__tagline::before { content: "\201C"; }
+.interest-grid__tagline::after { content: "\201D"; }
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -451,6 +481,106 @@ main h2::before {
   font-size: 0.92rem;
 }
 .interests__more { margin-top: var(--s4); font-size: 0.95rem; }
+
+/* -------------------------------------------------------------------------
+   News — press coverage as thumbnail cards
+   ------------------------------------------------------------------------- */
+.news-list { display: grid; gap: var(--s3); }
+.news-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: var(--s3);
+  align-items: start;
+  padding: var(--s3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  transition: box-shadow 200ms ease;
+}
+/* The card holds several outlet links, so it is not itself a link — no lift on
+   hover, just a soft shadow marking the row under the cursor. */
+.news-item:hover { box-shadow: 0 6px 24px rgba(26, 26, 24, 0.07); }
+
+.news-item__thumb {
+  width: 140px;
+  height: 140px;
+  border: 1px solid var(--border);
+  border-radius: calc(var(--radius) - 2px);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* contain, not cover: these are the papers' own TOC figures and must not be
+   cropped (theme figures use cover). The influenza one is portrait, so it
+   letterboxes inside the square rather than losing the top of the nanobarrel. */
+.news-item__thumb--image { object-fit: contain; padding: var(--s1); }
+.news-item__thumb--tile {
+  background: linear-gradient(135deg, var(--accent-light), #F4EFE7);
+  color: var(--accent);
+  text-align: center;
+  padding: var(--s1);
+}
+.news-item__tile-main {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+.news-item__tile-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.news-item__headline {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+.news-item__meta {
+  margin-top: var(--s1);
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+/* Outlets that covered the paper — chip links, same shape as .keyword */
+.news-item__outlets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  margin-top: var(--s2);
+}
+.news-outlet {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-primary);
+}
+.news-outlet:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.news-outlet__hint {
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.news-outlet:hover .news-outlet__hint { color: inherit; }
 
 /* -------------------------------------------------------------------------
    Publications
@@ -493,9 +623,22 @@ main h2::before {
 }
 .pub__authors { color: var(--text-secondary); font-size: 0.95rem; margin: 0 0 4px 0; }
 .pub__authors strong { color: var(--text-primary); font-weight: 700; }
+/* † co-first, * co-corresponding — footnote markers, so they ride above the
+   baseline. line-height: 0 keeps raising them from opening up the line spacing. */
+sup {
+  font-size: 0.72em;
+  line-height: 0;
+  vertical-align: super;
+  font-weight: 600;
+}
 .pub__journal { font-size: 0.95rem; margin: 0 0 8px 0; }
 .pub__journal em { font-style: italic; font-weight: 700; color: var(--accent); }
 .pub__meta { color: var(--text-secondary); }
+/* Cover / feature credit, tucked onto the end of the citation. Burgundy, but
+   deliberately neither bold nor italic — the journal name is the only
+   bold-italic thing on this line, and that weight difference is what separates
+   them. (Gold was tried here and reverted.) */
+.pub__cover { color: var(--accent); }
 .pub__badges { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2); align-items: center; margin-top: 8px; }
 .pub__note { font-size: 0.85rem; color: var(--text-secondary); font-style: italic; }
 
@@ -515,11 +658,11 @@ main h2::before {
    ------------------------------------------------------------------------- */
 .contact-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) 340px;
   gap: var(--s6);
   align-items: start;
 }
-.contact-grid { display: grid; gap: var(--s4); max-width: 560px; }
+.contact-grid { display: grid; gap: var(--s4); max-width: 640px; }
 .contact-row { display: grid; grid-template-columns: 130px 1fr; gap: var(--s3); align-items: start; }
 .contact-row__label {
   font-size: 0.8rem;
@@ -531,6 +674,20 @@ main h2::before {
 }
 .contact-links { display: flex; flex-direction: column; gap: var(--s1); }
 .contact-links a { display: inline-flex; align-items: center; gap: var(--s1); }
+/* Work / Personal marker. Neutral grey on purpose: burgundy would read as a
+   link, and gold is already the Link chip on Publications. */
+.contact-email { display: flex; align-items: baseline; gap: var(--s2); flex-wrap: wrap; }
+.contact-email__tag {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 9px;
+  white-space: nowrap;
+}
 .contact-icon { display: inline-flex; flex-shrink: 0; }
 .contact-icon svg { width: 16px; height: 16px; display: block; }
 
@@ -596,8 +753,10 @@ main h2::before {
   .interest-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Contact: stack the map below the details before the columns get cramped */
-@media (max-width: 900px) {
+/* Contact: stack the map below the details before the columns get cramped.
+   The threshold is the container width, not an arbitrary breakpoint — any
+   narrower and the value column can no longer hold the address on one line. */
+@media (max-width: 1080px) {
   .contact-layout { grid-template-columns: 1fr; gap: var(--s5); }
 }
 
@@ -621,6 +780,11 @@ main h2::before {
   .interest-grid { grid-template-columns: 1fr; }
   .facts { gap: var(--s3) var(--s5); }
   .timeline__item { grid-template-columns: 1fr; gap: 4px; }
+  /* Keep the row side by side — a full-width square would dominate the screen */
+  .news-item { grid-template-columns: 88px 1fr; gap: var(--s2); padding: var(--s2); }
+  .news-item__thumb { width: 88px; height: 88px; }
+  .news-item__tile-main { font-size: 0.8rem; }
+  .news-item__tile-sub { font-size: 0.58rem; letter-spacing: 0.1em; }
   .pub { grid-template-columns: 1fr; gap: var(--s1); }
   .pub__year { padding-top: 0; }
   .contact-row { grid-template-columns: 1fr; gap: 4px; }
