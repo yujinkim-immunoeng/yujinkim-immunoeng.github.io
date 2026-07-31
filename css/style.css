@@ -432,23 +432,26 @@ a.badge--link:hover {
 }
 
 /* Research interests — four CV research fields, side by side on Home */
-/* First-person line under the Research Interests heading. Quotation marks make
-   it read as her own statement. A burgundy left rule was tried here and
-   reverted: every h2 already carries a burgundy bar above it (main h2::before),
-   and the two marks stacked into a broken L. Upright, not italic — Libre
-   Baskerville italic was tried on the hero tagline and rejected as hard to read.
-   A touch smaller than that tagline so the two don't compete. */
+/* Section intro under the Research Interests heading. The hairline separates it
+   from the card grid, and because this sits in .container--research it ends
+   level with the cards — structure, not an arbitrary underline. It replaced
+   generated quotation marks, which were there to make the line read as her own
+   voice; that rationale expired when the text stopped being first person.
+   Upright, not italic — Libre Baskerville italic was tried on the hero tagline
+   and rejected as hard to read. A touch smaller than that tagline so the two
+   don't compete. A burgundy LEFT rule was tried here and reverted: every h2
+   already carries a burgundy bar above it (main h2::before), and the two marks
+   stacked into a broken corner. Don't re-attempt that one — a bottom border is
+   a different edge in a different colour, which is why it works. */
 .interest-grid__tagline {
   margin: 0 0 var(--s4) 0;
+  padding-bottom: var(--s3);
+  border-bottom: 1px solid var(--border);
   font-family: var(--font-heading);
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text-primary);
 }
-/* Generated, not baked into the JSON: the quotes are presentation, so the data
-   stays a clean sentence and assistive tech treats them as decorative. */
-.interest-grid__tagline::before { content: "\201C"; }
-.interest-grid__tagline::after { content: "\201D"; }
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
