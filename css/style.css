@@ -432,21 +432,17 @@ a.badge--link:hover {
 }
 
 /* Research interests — four CV research fields, side by side on Home */
-/* Section intro under the Research Interests heading. The hairline separates it
-   from the card grid, and because this sits in .container--research it ends
-   level with the cards — structure, not an arbitrary underline. It replaced
-   generated quotation marks, which were there to make the line read as her own
-   voice; that rationale expired when the text stopped being first person.
+/* Section intro under the Research Interests heading. Plain — no quotation
+   marks, no rules of any kind. Three decorations have now been tried here and
+   all three were rejected: a burgundy LEFT rule (collided with the bar
+   main h2::before draws above every h2), generated quotation marks (made sense
+   only while the line was first person, and read as a quoted fragment once it
+   wasn't), and a hairline BELOW it (Yujin: too odd). Leave it undecorated.
    Upright, not italic — Libre Baskerville italic was tried on the hero tagline
    and rejected as hard to read. A touch smaller than that tagline so the two
-   don't compete. A burgundy LEFT rule was tried here and reverted: every h2
-   already carries a burgundy bar above it (main h2::before), and the two marks
-   stacked into a broken corner. Don't re-attempt that one — a bottom border is
-   a different edge in a different colour, which is why it works. */
+   don't compete. */
 .interest-grid__tagline {
   margin: 0 0 var(--s4) 0;
-  padding-bottom: var(--s3);
-  border-bottom: 1px solid var(--border);
   font-family: var(--font-heading);
   font-size: 1.1rem;
   line-height: 1.5;
