@@ -15,7 +15,7 @@
       "address": "yujin01270@gmail.com"
     }
   ],
-  "tagline": "I am an immune engineer designing nanobiomaterials that deliver biopharmaceuticals to immune cells and reprogram immune function to overcome refractory diseases.",
+  "tagline": "I am an immune engineer designing nanobiomaterials for vaccines and immunotherapies.",
   "research_keywords": [
     "Immune Engineering",
     "Nanomedicine",
@@ -88,7 +88,7 @@
       "icon": "vaccine"
     }
   ],
-  "research_interests_tagline": "I engineer nanomaterials to control where and how the immune system is instructed in vivo.",
+  "research_interests_tagline": "Engineering nanomaterials to control where and how the immune system is instructed in vivo.",
   "research_themes": [
     {
       "title": "Nanomaterial Platforms for Immune Delivery",
