@@ -735,7 +735,8 @@ sup {
 .reveal {
   opacity: 0;
   transform: translateY(8px);
-  animation: reveal 500ms ease forwards;
+  /* 500ms read as loading lag on every tab click; 200ms keeps the polish. */
+  animation: reveal 200ms ease forwards;
 }
 @keyframes reveal {
   to { opacity: 1; transform: translateY(0); }
