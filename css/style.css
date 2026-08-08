@@ -467,6 +467,8 @@ a.badge--link:hover {
   box-shadow: 0 6px 24px rgba(26, 26, 24, 0.07);
   transform: translateY(-2px);
 }
+/* Icon ABOVE the title. An icon-left-of-title flex row at 44px was tried
+   2026-08-07 and reverted the same day — Yujin: "B2로 바꾼게 더 못생겼어". */
 .interest-card__icon { display: block; color: var(--accent); margin-bottom: var(--s2); }
 .interest-card__icon svg { width: 28px; height: 28px; display: block; }
 .interest-card__title {

@@ -86,28 +86,52 @@
   }
 
   /* Inline line-art icons for the research-interest cards. stroke follows the
-     CSS color, and nothing is fetched from outside. */
+     CSS color, and nothing is fetched from outside. Motifs follow Yujin's own
+     research-overview figure: a ligand-decorated nanoparticle, a nucleic-acid
+     helix, an immune cell activating another, and a syringe with a capsule. */
   var INTEREST_ICONS = {
     "nanoparticle":
+      // Lipid-bilayer particle: two concentric membranes with radial lipid
+      // tails between them, small cargo inside, and a light PEG corona —
+      // short wavy strands, not spikes (two spiked drafts read as a virus).
       '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4">' +
-      '<circle cx="16" cy="16" r="7"/><circle cx="16" cy="16" r="11.5" stroke-dasharray="2 3"/>' +
-      '<circle cx="16" cy="4.5" r="1.6" fill="currentColor" stroke="none"/>' +
-      '<circle cx="27.5" cy="16" r="1.6" fill="currentColor" stroke="none"/>' +
-      '<circle cx="16" cy="27.5" r="1.6" fill="currentColor" stroke="none"/>' +
-      '<circle cx="4.5" cy="16" r="1.6" fill="currentColor" stroke="none"/></svg>',
+      '<circle cx="16" cy="16" r="15.3" fill="var(--accent-light)" stroke="none"/>' +
+      '<circle cx="16" cy="16" r="9.5"/>' +
+      '<circle cx="16" cy="16" r="6.3"/>' +
+      '<path d="M23.1 16h1.7M21 21l1.2 1.2M16 23.1v1.7M11 21l-1.2 1.2M7.2 16h1.7M9.8 9.8L11 11M16 7.2v1.7M21 11l1.2-1.2"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0" transform="rotate(60 16 16)"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0" transform="rotate(120 16 16)"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0" transform="rotate(180 16 16)"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0" transform="rotate(240 16 16)"/>' +
+      '<path d="M26.2 16q.7-1 1.4 0t1.4 0" transform="rotate(300 16 16)"/>' +
+      '<circle cx="14.2" cy="14.8" r="1.3" fill="currentColor" stroke="none"/>' +
+      '<circle cx="18" cy="15.2" r=".95" fill="currentColor" stroke="none"/>' +
+      '<circle cx="16.1" cy="18.2" r="1.1" fill="currentColor" stroke="none"/></svg>',
     "delivery":
+      // Nucleic-acid double helix (Yujin picked this over the RNA + small-
+      // molecule draft).
       '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">' +
-      '<path d="M3 9c4-3 7 3 11 0s7 3 11 0"/><path d="M3 16c4-3 7 3 11 0s7 3 11 0"/>' +
-      '<path d="M3 23c4-3 7 3 11 0s7 3 11 0"/></svg>',
+      '<circle cx="16" cy="16" r="15.3" fill="var(--accent-light)" stroke="none"/>' +
+      '<path d="M10.5 4c0 4 11 4 11 8s-11 4-11 8 11 4 11 8"/>' +
+      '<path d="M21.5 4c0 4-11 4-11 8s11 4 11 8-11 4-11 8"/>' +
+      '<path d="M12.3 5.5h7.4M12 12h8M12 20h8M12.3 26.5h7.4"/></svg>',
     "immune-cell":
       '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4">' +
-      '<circle cx="12" cy="13" r="6.5"/><circle cx="21" cy="20" r="6.5"/>' +
-      '<circle cx="12" cy="13" r="2" fill="currentColor" stroke="none"/>' +
-      '<circle cx="21" cy="20" r="2" fill="currentColor" stroke="none"/></svg>',
+      '<circle cx="16" cy="16" r="15.3" fill="var(--accent-light)" stroke="none"/>' +
+      '<circle cx="11.5" cy="12.5" r="7"/>' +
+      '<circle cx="10.5" cy="11.5" r="2.6"/>' +
+      '<circle cx="14.6" cy="15.6" r="1" fill="currentColor" stroke="none"/>' +
+      '<circle cx="22" cy="21.5" r="5.8"/>' +
+      '<path d="M24.9 21.5l-1.7.7.3 1.8-1.5-1.1-1.4 1.1.2-1.8-1.7-.7 1.7-.7-.2-1.8 1.4 1.1 1.5-1.1-.3 1.8z" fill="currentColor" stroke="none"/></svg>',
     "vaccine":
       '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">' +
-      '<path d="M20 5l7 7"/><path d="M23.5 8.5l-13 13-5.5 1.5 1.5-5.5 13-13z"/>' +
-      '<path d="M14 12l4 4"/><path d="M11 15l4 4"/></svg>'
+      '<circle cx="16" cy="16" r="15.3" fill="var(--accent-light)" stroke="none"/>' +
+      '<path d="M24.5 3.5l4 4"/><path d="M26.5 5.5l-2.6 2.6"/>' +
+      '<path d="M21.6 6.4l4 4-10.6 10.6-4-4z"/>' +
+      '<path d="M16.9 11.1l2 2M13.9 14.1l2 2"/>' +
+      '<path d="M12.9 19.1l-4.4 4.4"/>' +
+      '<g transform="rotate(-20 24.2 25.3)"><rect x="19.5" y="23" width="9.4" height="4.6" rx="2.3"/><path d="M24.2 23v4.6"/></g></svg>'
   };
 
   /* ---------- Home / index ---------- */
