@@ -18,6 +18,19 @@
     },
     {
       "order": 2,
+      "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim, James J. Moon*",
+      "corresponding_author": "James J. Moon",
+      "author_role": "first",
+      "title": "Immunological considerations in lipid nanoparticle design",
+      "journal": null,
+      "year": null,
+      "status": "under_review",
+      "impact_factor": null,
+      "journal_ranking": null,
+      "special_notes": "Under review"
+    },
+    {
+      "order": 3,
       "authors": "Yujin Kim, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
@@ -30,24 +43,11 @@
       "special_notes": "Submitted"
     },
     {
-      "order": 3,
+      "order": 4,
       "authors": "Yujin Kim, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
       "title": "Tissue-tropic lipid nanoparticle design for mRNA cancer vaccination",
-      "journal": null,
-      "year": null,
-      "status": "in_prep",
-      "impact_factor": null,
-      "journal_ranking": null,
-      "special_notes": "Manuscript in preparation"
-    },
-    {
-      "order": 4,
-      "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim, James J. Moon*",
-      "corresponding_author": "James J. Moon",
-      "author_role": "first",
-      "title": "Immunological considerations in lipid nanoparticle design",
       "journal": null,
       "year": null,
       "status": "in_prep",
