@@ -96,11 +96,11 @@ img { max-width: 100%; display: block; }
 /* Contact needs room for the details + map side by side, and enough width for
    the street address to stay on one line */
 .container--contact { max-width: 1080px; }
-/* About matches the other wide pages; the bio itself stays on a reading
-   measure via .prose below */
-.container--about { max-width: 1080px; }
-/* Publications and News — widened to match Contact (900px felt narrow) */
-.container--pubs { max-width: 1080px; }
+/* Publications is text-heavy — keep a comfortable reading measure.
+   (1080px was tried for About and Publications and reverted; News kept it.) */
+.container--pubs { max-width: 900px; }
+/* News holds image cards, which use the extra room */
+.container--news { max-width: 1080px; }
 /* Research holds a 2-column card grid */
 .container--research { max-width: 1080px; }
 
@@ -311,9 +311,6 @@ a.badge--link:hover {
 /* -------------------------------------------------------------------------
    Bio / prose
    ------------------------------------------------------------------------- */
-/* The About container widened to 1080px, but paragraphs at that measure run
-   ~125 characters a line — the prose keeps the old text width instead. */
-.prose { max-width: var(--max-text); }
 .prose p { margin-bottom: var(--s3); }
 .prose__lead { font-size: 1.1rem; color: var(--text-primary); }
 .prose a { font-weight: 700; }
