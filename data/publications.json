@@ -37,10 +37,10 @@
       "title": "Artificial intelligence in lipid nanoparticle design",
       "journal": null,
       "year": null,
-      "status": "submitted",
+      "status": "under_review",
       "impact_factor": null,
       "journal_ranking": null,
-      "special_notes": "Submitted"
+      "special_notes": "Under review"
     },
     {
       "order": 4,
@@ -57,19 +57,6 @@
     },
     {
       "order": 5,
-      "authors": "Yujin Kim, James J. Moon*",
-      "corresponding_author": "James J. Moon",
-      "author_role": "first",
-      "title": "In situ engineering of chimeric antigen receptor macrophages for cancer immunotherapy",
-      "journal": null,
-      "year": null,
-      "status": "in_prep",
-      "impact_factor": null,
-      "journal_ranking": null,
-      "special_notes": "Manuscript in preparation"
-    },
-    {
-      "order": 6,
       "authors": "Yujin Kim†, Seojung Lee†, Jungmin Yoon, Yumi Shin, Sukmo Kang, Sun-Young Kim, Sangmin Woo, Ji-Joon Song*, Sangyong Jon*",
       "corresponding_author": "Ji-Joon Song, Sangyong Jon",
       "author_role": "co_first",
@@ -85,7 +72,7 @@
       "special_notes": null
     },
     {
-      "order": 7,
+      "order": 6,
       "authors": "Yujin Kim*, Seojung Lee, Sangyong Jon*",
       "corresponding_author": "Yujin Kim, Sangyong Jon",
       "author_role": "corresponding",
@@ -101,7 +88,7 @@
       "special_notes": "Inside Back Cover"
     },
     {
-      "order": 8,
+      "order": 7,
       "authors": "Hocheol Shin†, Yujin Kim†, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_first",
@@ -117,7 +104,7 @@
       "special_notes": null
     },
     {
-      "order": 9,
+      "order": 8,
       "authors": "Sukmo Kang†, Yujin Kim†, Yumi Shin, Ji-Joon Song*, Sangyong Jon*",
       "corresponding_author": "Ji-Joon Song, Sangyong Jon",
       "author_role": "co_first",
@@ -133,7 +120,7 @@
       "special_notes": null
     },
     {
-      "order": 10,
+      "order": 9,
       "authors": "Yujin Kim†, Sukmo Kang†, Hocheol Shin, Taewoo Kim, Byeongjun Yu, Jinjoo Kim, Dohyun Yoo, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_first",
@@ -151,7 +138,7 @@
   ],
   "co_author": [
     {
-      "order": 13,
+      "order": 10,
       "authors": "Kai Han*, Young Seok Cho*, Mariko Takahashi, Xingwu Zhou, Hannah Dobson, Kim Hutchings, Yuesong Wu, Youngseo Na, Fang Xie, Julia Crowther, Jinmei Wu, Jin Xu, Chuan Lee, Himani Jasewicz, Yujin Kim, Minal Nenwani, Olamide Animasahun, Fulei Wuchu, Anthony Andren, Harrison Wong, Emma Camp, Ziye Wan, Qi Wu, Li Zhang, Cheng Xu, Katherine Dong, Yao Xu, Anna Schwendeman, Grace Y. Chen, Yuying Xie, Costas A. Lyssiotis, Martin Clasby, Deepak Nagrath, Yu Leo Lei, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "co_author",
@@ -165,7 +152,7 @@
       "special_notes": null
     },
     {
-      "order": 14,
+      "order": 11,
       "authors": "Yeonwoo Jang, Naline Bellier, Kevin Kent Vincent Canlas, Ju Yeon Lee, Yujin Kim, Hansoo Park*, James J. Moon*",
       "corresponding_author": "Hansoo Park, James J. Moon",
       "author_role": "co_author",
@@ -180,7 +167,7 @@
       "special_notes": null
     },
     {
-      "order": 15,
+      "order": 12,
       "authors": "Seojung Lee, Yejin Jang, Yujin Kim, Yumi Shin, Ji-Joon Song*, Meehyein Kim*, Sangyong Jon*",
       "corresponding_author": "Ji-Joon Song, Meehyein Kim, Sangyong Jon",
       "author_role": "co_author",
@@ -195,7 +182,7 @@
       "special_notes": null
     },
     {
-      "order": 16,
+      "order": 13,
       "authors": "Yeonwoo Jang, Young Seok Cho, April Kim, Xingwu Zhou, Yujin Kim, Ziye Wan, James J. Moon*, Hansoo Park*",
       "corresponding_author": "James J. Moon, Hansoo Park",
       "author_role": "co_author",
@@ -210,7 +197,7 @@
       "special_notes": null
     },
     {
-      "order": 17,
+      "order": 14,
       "authors": "Dohyeon Kim, Chang-Hee Whang, Jungwoo Hong, Monica Celine Prayogo, Wonsik Jung, Seojung Lee, Hocheol Shin, Yujin Kim, Jiyoung Yu, Min Joong Kim, Kyunggon Kim, Hee-Seung Lee*, Sangyong Jon*",
       "corresponding_author": "Hee-Seung Lee, Sangyong Jon",
       "author_role": "co_author",
@@ -225,7 +212,7 @@
       "special_notes": null
     },
     {
-      "order": 18,
+      "order": 15,
       "authors": "Tae Woo Kim, Yujin Kim, Hyeongseop Keum, Wonsik Jung, Minho Kang, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -240,7 +227,7 @@
       "special_notes": null
     },
     {
-      "order": 19,
+      "order": 16,
       "authors": "Byeongjun Yu, Dohyun Yoo, Ki Hyun Kim, Tae Woo Kim, Seho Park, Yujin Kim, Youngju Son, Jinjoo Kim, Ilkoo Noh, Changhee Whang, Junho Chung, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -254,7 +241,7 @@
       "special_notes": null
     },
     {
-      "order": 20,
+      "order": 17,
       "authors": "Tae Woo Kim, Yujin Kim, Wonsik Jung, Dong Eon Kim, Hyeongseop Keum, Youngju Son, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -269,7 +256,7 @@
       "special_notes": null
     },
     {
-      "order": 21,
+      "order": 18,
       "authors": "Hyeongseop Keum, Tae Woo Kim, Yujin Kim, Changjin Seo, Youngju Son, Jinjoo Kim, Dohyeon Kim, Wonsik Jung, Chang-Hee Whang, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -284,7 +271,7 @@
       "special_notes": null
     },
     {
-      "order": 22,
+      "order": 19,
       "authors": "Jinjoo Kim, Juncheol Lee, Jimin Lee, Hyeongseop Keum, Yumi Kim, Yujin Kim, Byeongjun Yu, Sang Yeop Lee, Junichi Tanaka, Sangyong Jon*, Myung Chul Choi*",
       "corresponding_author": "Sangyong Jon, Myung Chul Choi",
       "author_role": "co_author",
@@ -299,7 +286,7 @@
       "special_notes": null
     },
     {
-      "order": 23,
+      "order": 20,
       "authors": "Byeongjun Yu, Dobeen Hwang, Hyungsu Jeon, Hyungjun Kim, Yonghyun Lee, Hyeongseop Keum, Jinjoo Kim, Dong Yun Lee, Yujin Kim, Junho Chung, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -317,7 +304,7 @@
   "patents": [
     {
       "order": 1,
-      "inventors": "James J. Moon, Yujin Kim",
+      "inventors": "Yujin Kim, James J. Moon",
       "title": "LIPID NANOPARTICLE COMPOSITIONS AND RELATED METHODS",
       "status": "US Patent Pending"
     },
