@@ -5,6 +5,19 @@
   "first_and_corresponding_author": [
     {
       "order": 1,
+      "authors": "Yujin Kim, James J. Moon*",
+      "corresponding_author": "James J. Moon",
+      "author_role": "first",
+      "title": "Bringing immunology into artificial intelligence guided lipid nanoparticle design",
+      "journal": "Nature Reviews Materials",
+      "year": 2026,
+      "status": "accepted",
+      "impact_factor": 83.3,
+      "journal_ranking": null,
+      "special_notes": null
+    },
+    {
+      "order": 2,
       "authors": "Yujin Kim, Yao Xu, Xiang Liu, Xingwu Zhou, Katherine Dong, Guizhi Zhu, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
@@ -17,24 +30,11 @@
       "special_notes": "Under review"
     },
     {
-      "order": 2,
+      "order": 3,
       "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
       "title": "Immunological considerations in lipid nanoparticle design",
-      "journal": null,
-      "year": null,
-      "status": "under_review",
-      "impact_factor": null,
-      "journal_ranking": null,
-      "special_notes": "Under review"
-    },
-    {
-      "order": 3,
-      "authors": "Yujin Kim, James J. Moon*",
-      "corresponding_author": "James J. Moon",
-      "author_role": "first",
-      "title": "Artificial intelligence in lipid nanoparticle design",
       "journal": null,
       "year": null,
       "status": "under_review",

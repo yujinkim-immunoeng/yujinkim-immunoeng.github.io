@@ -125,7 +125,10 @@
     // Skip it only when the journal line above actually consumed it, so a
     // published entry with no journal still shows its note rather than losing it.
     if (p.special_notes && !(isPub && p.journal)) noteParts.push(p.special_notes);
-    if (!isPub && titleNote) noteParts.push(titleNote);
+    // An accepted paper has a final title and a named venue, so the
+    // generalized-title note would be a false statement on it. The note
+    // belongs only to the stages whose titles are deliberately vague.
+    if (!isPub && p.status !== "accepted" && titleNote) noteParts.push(titleNote);
     if (noteParts.length) {
       badges.push('<span class="pub__note">' + esc(noteParts.join(" · ")) + '</span>');
     }
