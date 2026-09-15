@@ -80,9 +80,12 @@
 
   function pubHtml(p, showMetrics, titleNote) {
     var isPub = p.status === "published";
-    // Year sits in the narrow left column only for published items; status
-    // badges live in the body so their width never collides with the title.
-    var yearCell = isPub && p.year ? esc(p.year) : "";
+    // The year column belongs to work with a settled year — published, and
+    // accepted, which has a volume waiting on it. Earlier stages carry no year
+    // at all. The status badge sits in the body either way, so its width never
+    // collides with the title.
+    var isDated = isPub || p.status === "accepted";
+    var yearCell = isDated && p.year ? esc(p.year) : "";
     var statusTag = isPub ? "" :
       '<span class="badge badge--status">' + esc(statusLabel(p.status)) + '</span>';
 
