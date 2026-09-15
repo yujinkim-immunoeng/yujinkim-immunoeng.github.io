@@ -5,19 +5,6 @@
   "first_and_corresponding_author": [
     {
       "order": 1,
-      "authors": "Yujin Kim, James J. Moon*",
-      "corresponding_author": "James J. Moon",
-      "author_role": "first",
-      "title": "Bringing immunology into artificial intelligence guided lipid nanoparticle design",
-      "journal": "Nature Reviews Materials",
-      "year": 2026,
-      "status": "accepted",
-      "impact_factor": 83.3,
-      "journal_ranking": null,
-      "special_notes": null
-    },
-    {
-      "order": 2,
       "authors": "Yujin Kim, Yao Xu, Xiang Liu, Xingwu Zhou, Katherine Dong, Guizhi Zhu, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
@@ -30,7 +17,7 @@
       "special_notes": "Under review"
     },
     {
-      "order": 3,
+      "order": 2,
       "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
@@ -43,7 +30,7 @@
       "special_notes": "Under review"
     },
     {
-      "order": 4,
+      "order": 3,
       "authors": "Yujin Kim, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "first",
@@ -54,6 +41,19 @@
       "impact_factor": null,
       "journal_ranking": null,
       "special_notes": "Manuscript in preparation"
+    },
+    {
+      "order": 4,
+      "authors": "Yujin Kim, James J. Moon*",
+      "corresponding_author": "James J. Moon",
+      "author_role": "first",
+      "title": "Bringing immunology into artificial intelligence guided lipid nanoparticle design",
+      "journal": "Nature Reviews Materials",
+      "year": 2026,
+      "status": "accepted",
+      "impact_factor": 83.3,
+      "journal_ranking": "Top 0.1% in Materials Science, Multidisciplinary category",
+      "special_notes": null
     },
     {
       "order": 5,
@@ -139,13 +139,14 @@
   "co_author": [
     {
       "order": 10,
-      "authors": "Kai Han*, Young Seok Cho*, Mariko Takahashi, Xingwu Zhou, Hannah Dobson, Kim Hutchings, Yuesong Wu, Youngseo Na, Fang Xie, Julia Crowther, Jinmei Wu, Jin Xu, Chuan Lee, Himani Jasewicz, Yujin Kim, Minal Nenwani, Olamide Animasahun, Fulei Wuchu, Anthony Andren, Harrison Wong, Emma Camp, Ziye Wan, Qi Wu, Li Zhang, Cheng Xu, Katherine Dong, Yao Xu, Anna Schwendeman, Grace Y. Chen, Yuying Xie, Costas A. Lyssiotis, Martin Clasby, Deepak Nagrath, Yu Leo Lei, James J. Moon*",
+      "authors": "Kai Han*, Young Seok Cho*, Mariko Takahashi, Xingwu Zhou, Hannah E. Dobson, Kim Hutchings, Yuesong Wu, Youngseo Na, Fang Xie, Julia Crowther, Jinmei Wu, Jin Xu, Chuan Lee, Himani Jasewicz, Yujin Kim, Minal Nenwani, Olamide Animasahun, Fulei Wuchu, Anthony Andren, Harrison Wong, Emma Camp, Ziye Wan, Qi Wu, Li Zhang, Cheng Xu, Katherine Dong, Yao Xu, Anna Schwendeman, Grace Y. Chen, Yuying Xie, Costas A. Lyssiotis, Martin Clasby, Deepak Nagrath, Yu Leo Lei, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "co_author",
-      "title": "Oral Nano-Delivery of a Gut Microbial Metabolite Enhances T Cell Stemness for Cancer Immunotherapy",
+      "title": "Oral nano-delivery of a gut microbial metabolite enhances T cell stemness for cancer immunotherapy",
       "journal": "Nature Nanotechnology",
       "year": 2026,
-      "month": "Aug",
+      "volume_issue_pages": "21(9):1338-1349",
+      "month": "Sep",
       "status": "published",
       "impact_factor": null,
       "journal_ranking": null,
