@@ -130,6 +130,11 @@
   "honors_awards": [
     {
       "year": "2026",
+      "award": "PSK-INNOX Early Career Researcher Award",
+      "detail": "Polymer Society of Korea (PSK)"
+    },
+    {
+      "year": "2026",
       "award": "The Early-Career Rising KBMES Star Award",
       "detail": "Korean-American Biomedical Engineering Society (KBMES)"
     },
