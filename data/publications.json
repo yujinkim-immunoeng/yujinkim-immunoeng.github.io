@@ -1,6 +1,6 @@
 {
   "author_name": "Yujin Kim",
-  "note": "author_role: 'first' = first author, 'corresponding' = corresponding author, 'co_first' = co-first author, 'co_corresponding' = co-corresponding author, 'co_author' = co-author only. status: 'published', 'accepted', 'under_review', 'submitted', 'in_prep'.",
+  "note": "author_role: 'first' = first author, 'corresponding' = corresponding author, 'co_first' = co-first author, 'co_corresponding' = co-corresponding author, 'co_author' = co-author only. status: 'published', 'accepted', 'under_review', 'under_revision', 'submitted', 'in_prep'.",
   "unpublished_title_note": "Title stated in general terms prior to publication.",
   "first_and_corresponding_author": [
     {
@@ -11,10 +11,10 @@
       "title": "Engineering lipid nanoparticles for enhanced endosomal escape and efficient mRNA delivery",
       "journal": null,
       "year": null,
-      "status": "under_review",
+      "status": "under_revision",
       "impact_factor": null,
       "journal_ranking": null,
-      "special_notes": "Under review"
+      "special_notes": "Under revision"
     },
     {
       "order": 2,

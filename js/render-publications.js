@@ -11,6 +11,7 @@
 
   var STATUS_LABELS = {
     under_review: "Under Review",
+    under_revision: "Under Revision",
     submitted: "Submitted",
     accepted: "Accepted",
     in_prep: "In Preparation",
