@@ -18,8 +18,8 @@
     },
     {
       "order": 2,
-      "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim, James J. Moon*",
-      "corresponding_author": "James J. Moon",
+      "authors": "Yujin Kim, Xingwu Zhou, Jinseong Kim, Guizhi Zhu, Kwangmeyung Kim*, James J. Moon*",
+      "corresponding_author": "Kwangmeyung Kim, James J. Moon",
       "author_role": "first",
       "title": "Immunological considerations in lipid nanoparticle design",
       "journal": null,
@@ -62,7 +62,7 @@
       "authors": "Yujin Kim†, Seojung Lee†, Jungmin Yoon, Yumi Shin, Sukmo Kang, Sun-Young Kim, Sangmin Woo, Ji-Joon Song*, Sangyong Jon*",
       "corresponding_author": "Ji-Joon Song, Sangyong Jon",
       "author_role": "co_first",
-      "title": "Neoantigen-Displaying Protein Nanoparticles as a Therapeutic Cancer Vaccine against Melanoma",
+      "title": "Neoantigen-Displaying Protein Nanoparticles as a Therapeutic Cancer Vaccine Against Melanoma",
       "journal": "Advanced Healthcare Materials",
       "year": 2025,
       "volume_issue_pages": "14(4):e2404316",
@@ -94,7 +94,7 @@
       "authors": "Hocheol Shin†, Yujin Kim†, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_first",
-      "title": "Nanovaccine Displaying Immunodominant T Cell Epitopes of Fibroblast Activation Protein is Effective Against Desmoplastic Tumors",
+      "title": "Nanovaccine Displaying Immunodominant T Cell Epitopes of Fibroblast Activation Protein Is Effective Against Desmoplastic Tumors",
       "journal": "ACS Nano",
       "year": 2023,
       "volume_issue_pages": "17(11):10337-10352",
@@ -141,6 +141,21 @@
   "co_author": [
     {
       "order": 10,
+      "authors": "Seong Dong Jeong, Chaoyang Tang, Xiaotian Wang, Antoni J. Szeglowski, Yujin Kim, B.J. Kim, Padmanee Sharma, James J. Moon, Wen Jiang*, Betty Y.S. Kim*",
+      "corresponding_author": "Wen Jiang, Betty Y.S. Kim",
+      "author_role": "co_author",
+      "title": "Programmable mRNA vaccine materials for temporal control of antitumour immunity",
+      "journal": "Nature Reviews Materials",
+      "year": 2026,
+      "volume_issue_pages": null,
+      "month": "Oct",
+      "status": "published",
+      "impact_factor": 83.3,
+      "journal_ranking": "Top 0.1% in Materials Science, Multidisciplinary category",
+      "special_notes": null
+    },
+    {
+      "order": 11,
       "authors": "Kai Han*, Young Seok Cho*, Mariko Takahashi, Xingwu Zhou, Hannah E. Dobson, Kim Hutchings, Yuesong Wu, Youngseo Na, Fang Xie, Julia Crowther, Jinmei Wu, Jin Xu, Chuan Lee, Himani Jasewicz, Yujin Kim, Minal Nenwani, Olamide Animasahun, Fulei Wuchu, Anthony Andren, Harrison Wong, Emma Camp, Ziye Wan, Qi Wu, Li Zhang, Cheng Xu, Katherine Dong, Yao Xu, Anna Schwendeman, Grace Y. Chen, Yuying Xie, Costas A. Lyssiotis, Martin Clasby, Deepak Nagrath, Yu Leo Lei, James J. Moon*",
       "corresponding_author": "James J. Moon",
       "author_role": "co_author",
@@ -155,11 +170,11 @@
       "special_notes": null
     },
     {
-      "order": 11,
+      "order": 12,
       "authors": "Yeonwoo Jang, Naline Bellier, Kevin Kent Vincent Canlas, Ju Yeon Lee, Yujin Kim, Hansoo Park*, James J. Moon*",
       "corresponding_author": "Hansoo Park, James J. Moon",
       "author_role": "co_author",
-      "title": "Simulation-guided design of peptide–metal coordination interfaces for next-generation metallo-immunotherapy",
+      "title": "Simulation-guided design of peptide-metal coordination interfaces for next-generation metallo-immunotherapy",
       "journal": "Nano Convergence",
       "year": 2026,
       "volume_issue_pages": "13(1):14",
@@ -170,22 +185,22 @@
       "special_notes": null
     },
     {
-      "order": 12,
+      "order": 13,
       "authors": "Seojung Lee, Yejin Jang, Yujin Kim, Yumi Shin, Ji-Joon Song*, Meehyein Kim*, Sangyong Jon*",
       "corresponding_author": "Ji-Joon Song, Meehyein Kim, Sangyong Jon",
       "author_role": "co_author",
       "title": "A Modular Vaccine Platform Against SARS-CoV-2 Based on Self-Assembled Protein Nanoparticles",
       "journal": "Advanced Science",
       "year": 2026,
-      "volume_issue_pages": "e13431",
-      "month": "Jan",
+      "volume_issue_pages": "13(10):e13431",
+      "month": "Feb",
       "status": "published",
       "impact_factor": 14.1,
       "journal_ranking": "Top 7.0% in Materials Science, Multidisciplinary category",
       "special_notes": null
     },
     {
-      "order": 13,
+      "order": 14,
       "authors": "Yeonwoo Jang, Young Seok Cho, April Kim, Xingwu Zhou, Yujin Kim, Ziye Wan, James J. Moon*, Hansoo Park*",
       "corresponding_author": "James J. Moon, Hansoo Park",
       "author_role": "co_author",
@@ -200,7 +215,7 @@
       "special_notes": null
     },
     {
-      "order": 14,
+      "order": 15,
       "authors": "Dohyeon Kim, Chang-Hee Whang, Jungwoo Hong, Monica Celine Prayogo, Wonsik Jung, Seojung Lee, Hocheol Shin, Yujin Kim, Jiyoung Yu, Min Joong Kim, Kyunggon Kim, Hee-Seung Lee*, Sangyong Jon*",
       "corresponding_author": "Hee-Seung Lee, Sangyong Jon",
       "author_role": "co_author",
@@ -215,7 +230,7 @@
       "special_notes": null
     },
     {
-      "order": 15,
+      "order": 16,
       "authors": "Tae Woo Kim, Yujin Kim, Hyeongseop Keum, Wonsik Jung, Minho Kang, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -230,21 +245,22 @@
       "special_notes": null
     },
     {
-      "order": 16,
-      "authors": "Byeongjun Yu, Dohyun Yoo, Ki Hyun Kim, Tae Woo Kim, Seho Park, Yujin Kim, Youngju Son, Jinjoo Kim, Ilkoo Noh, Changhee Whang, Junho Chung, Sangyong Jon*",
+      "order": 17,
+      "authors": "Byeongjun Yu, Dohyun Yoo, Ki Hyun Kim, Tae Woo Kim, Seho Park, Yujin Kim, Youngju Son, Jinjoo Kim, Ilkoo Noh, Chang-Hee Whang, Junho Chung, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
-      "title": "Effective Combination Immunotherapy through Vessel Normalization Using a Cancer-Targeting Antiangiogenic Peptide-Antibody Hybrid",
+      "title": "Effective Combination Immunotherapy through Vessel Normalization Using a Cancer-Targeting Antiangiogenic Peptide–Antibody Hybrid",
       "journal": "Advanced Therapeutics",
       "year": 2022,
-      "volume_issue_pages": "5, 2100151",
+      "volume_issue_pages": "5(4):2100151",
+      "month": "Apr",
       "status": "published",
       "impact_factor": 2.6,
       "journal_ranking": "Top 50.3% in Pharmacology & Pharmacy category",
       "special_notes": null
     },
     {
-      "order": 17,
+      "order": 18,
       "authors": "Tae Woo Kim, Yujin Kim, Wonsik Jung, Dong Eon Kim, Hyeongseop Keum, Youngju Son, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -259,7 +275,7 @@
       "special_notes": null
     },
     {
-      "order": 18,
+      "order": 19,
       "authors": "Hyeongseop Keum, Tae Woo Kim, Yujin Kim, Changjin Seo, Youngju Son, Jinjoo Kim, Dohyeon Kim, Wonsik Jung, Chang-Hee Whang, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
@@ -274,7 +290,7 @@
       "special_notes": null
     },
     {
-      "order": 19,
+      "order": 20,
       "authors": "Jinjoo Kim, Juncheol Lee, Jimin Lee, Hyeongseop Keum, Yumi Kim, Yujin Kim, Byeongjun Yu, Sang Yeop Lee, Junichi Tanaka, Sangyong Jon*, Myung Chul Choi*",
       "corresponding_author": "Sangyong Jon, Myung Chul Choi",
       "author_role": "co_author",
@@ -289,7 +305,7 @@
       "special_notes": null
     },
     {
-      "order": 20,
+      "order": 21,
       "authors": "Byeongjun Yu, Dobeen Hwang, Hyungsu Jeon, Hyungjun Kim, Yonghyun Lee, Hyeongseop Keum, Jinjoo Kim, Dong Yun Lee, Yujin Kim, Junho Chung, Sangyong Jon*",
       "corresponding_author": "Sangyong Jon",
       "author_role": "co_author",
