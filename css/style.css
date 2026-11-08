@@ -586,6 +586,23 @@ a.badge--link:hover {
 }
 .news-outlet:hover .news-outlet__hint { color: inherit; }
 
+/* Awards share the press card. The label borrows the gold eyebrow role; the
+   certificate is portrait, so contain letterboxes it inside the square. */
+.news-group + .news-group { margin-top: var(--s6); }
+.news-item__kind {
+  margin: 0 0 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+}
+.news-item__detail {
+  margin: var(--s1) 0 0;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
 /* -------------------------------------------------------------------------
    Publications
    ------------------------------------------------------------------------- */

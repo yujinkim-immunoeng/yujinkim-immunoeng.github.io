@@ -1,5 +1,30 @@
 {
-  "note": "Press coverage shown on news.html, grouped one entry per paper. To add coverage of a new paper, copy an entry anywhere in the array — the renderer sorts by date, newest first. Required: `date` (YYYY-MM, the paper's issue date from the CV — it renders as the tail of a citation, not as the press date) and `headline` (written in English; the site is English-only). Optional: `related` (the journal name), `image` (the paper's TOC figure under assets/news/) with `image_alt` describing the graphic, and `thumb` (text for a generated tile when there is no image, e.g. \"ACS Nano\" renders as ACS over NANO). Each entry in `outlets` needs `name` and `url`; add `kind`: \"video\" for broadcast segments. (`language` is also supported but deliberately unused — labelling the Korean articles was dropped.) To add one more outlet to a paper already listed, just append to its `outlets` array.",
+  "note": "Press coverage shown on news.html, grouped one entry per paper. To add coverage of a new paper, copy an entry anywhere in the array — the renderer sorts by date, newest first. Required: `date` (YYYY-MM, the paper's issue date from the CV — it renders as the tail of a citation, not as the press date) and `headline` (written in English; the site is English-only). Optional: `related` (the journal name), `image` (the paper's TOC figure under assets/news/) with `image_alt` describing the graphic, and `thumb` (text for a generated tile when there is no image, e.g. \"ACS Nano\" renders as ACS over NANO). Each entry in `outlets` needs `name` and `url`; add `kind`: \"video\" for broadcast segments. (`language` is also supported but deliberately unused — labelling the Korean articles was dropped.) To add one more outlet to a paper already listed, just append to its `outlets` array. Awards go in `awards`: each needs `date` (YYYY-MM, the award date), `award` (the prize name, as in profile.json honors_awards) and `body` (the awarding society); `detail`, `image` (the certificate under assets/news/, a 320px copy) and `image_alt` are optional. Top-level `layout` is \"grouped\" (default: awards and press as two sections) or \"mixed\" (one list by date).",
+  "layout": "grouped",
+  "awards": [
+    {
+      "date": "2026-10",
+      "award": "KBMES Rising Star Award",
+      "body": "Korean-American Biomedical Engineering Society",
+      "image": "assets/news/award-2026-kbmes-rising-star.png",
+      "image_alt": "KBMES Rising Star Award plaque from the Korean-American Biomedical Engineering Society, October 2026."
+    },
+    {
+      "date": "2026-10",
+      "award": "PSK-INNOX Early Career Researcher Award",
+      "body": "Polymer Society of Korea",
+      "image": "assets/news/award-2026-psk-innox.png",
+      "image_alt": "Certificate of the PSK-INNOX Early Career Researcher Award from the Polymer Society of Korea, October 2026."
+    },
+    {
+      "date": "2025-11",
+      "award": "KASBP Fellowship Award",
+      "body": "Korean American Society in Biotech and Pharmaceuticals",
+      "detail": "2025 Fall KASBP Symposium",
+      "image": "assets/news/award-2025-kasbp-fellowship.png",
+      "image_alt": "KASBP-Daewoong Fellowship Award certificate, November 2025."
+    }
+  ],
   "press": [
     {
       "date": "2023-06",

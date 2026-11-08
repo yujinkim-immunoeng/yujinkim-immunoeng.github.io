@@ -411,20 +411,58 @@
       '</div>';
   }
 
+  /* An award card: the certificate as thumbnail, the prize as headline, and the
+     awarding body plus month as meta. It carries no outlet links. The gold
+     "Award" label uses the eyebrow colour role, so it reads as a category, not
+     as a link or a status. */
+  function awardItem(a) {
+    var meta = [a.body, newsDate(a.date)].filter(Boolean).map(esc).join(" · ");
+    return '<div class="news-item news-item--award">' +
+      newsThumb(a) +
+      '<div class="news-item__body">' +
+        '<p class="news-item__kind">Award</p>' +
+        '<p class="news-item__headline">' + esc(a.award) + '</p>' +
+        (meta ? '<div class="news-item__meta">' + meta + '</div>' : "") +
+        (a.detail ? '<p class="news-item__detail">' + esc(a.detail) + '</p>' : "") +
+      '</div>' +
+      '</div>';
+  }
+
+  // ISO dates sort correctly as plain strings; newest first.
+  function byDateDesc(a, b) {
+    return String(b.date).localeCompare(String(a.date));
+  }
+
+  /* `layout` in news.json picks how awards and press share the page:
+     "grouped" (default) gives each its own h2 section, awards first;
+     "mixed" interleaves both kinds in one list by date. */
   function renderNews(d) {
     var wrap = el("news");
     if (!wrap) return;
-    var items = (Array.isArray(d.press) ? d.press : []).slice();
-    if (!items.length) {
-      wrap.innerHTML = '<p class="text-secondary">No coverage listed yet.</p>';
+    var press = (Array.isArray(d.press) ? d.press : []).slice().sort(byDateDesc);
+    var awards = (Array.isArray(d.awards) ? d.awards : []).slice().sort(byDateDesc);
+    if (!press.length && !awards.length) {
+      wrap.innerHTML = '<p class="text-secondary">No news listed yet.</p>';
       reveal(wrap);
       return;
     }
-    // ISO dates sort correctly as plain strings; newest first.
-    items.sort(function (a, b) {
-      return String(b.date).localeCompare(String(a.date));
-    });
-    wrap.innerHTML = '<div class="news-list">' + items.map(newsItem).join("") + '</div>';
+    if (d.layout === "mixed") {
+      var all = press.map(function (n) { return { date: n.date, html: newsItem(n) }; })
+        .concat(awards.map(function (a) { return { date: a.date, html: awardItem(a) }; }))
+        .sort(byDateDesc);
+      wrap.innerHTML = '<div class="news-list">' +
+        all.map(function (x) { return x.html; }).join("") + '</div>';
+    } else {
+      wrap.innerHTML =
+        (awards.length
+          ? '<section class="news-group"><h2>Honors &amp; Awards</h2>' +
+            '<div class="news-list">' + awards.map(awardItem).join("") + '</div></section>'
+          : "") +
+        (press.length
+          ? '<section class="news-group"><h2>In the Press</h2>' +
+            '<div class="news-list">' + press.map(newsItem).join("") + '</div></section>'
+          : "");
+    }
     reveal(wrap);
   }
 
