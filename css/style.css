@@ -96,10 +96,11 @@ img { max-width: 100%; display: block; }
 /* Contact needs room for the details + map side by side, and enough width for
    the street address to stay on one line */
 .container--contact { max-width: 1080px; }
-/* Publications is text-heavy — keep a comfortable reading measure.
-   (1080px was tried for About and Publications and reverted; News kept it.) */
-.container--pubs { max-width: 900px; }
-/* News holds image cards, which use the extra room */
+/* About, Publications and News share one 1080px column so the three pages line
+   up when switching between them (Yujin, 2026-11-08). This reverses the earlier
+   per-page widths (About 720, Publications 900). */
+.container--about,
+.container--pubs,
 .container--news { max-width: 1080px; }
 /* Research holds a 2-column card grid */
 .container--research { max-width: 1080px; }
