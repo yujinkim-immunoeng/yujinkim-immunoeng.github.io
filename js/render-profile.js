@@ -40,7 +40,7 @@
   function el(id) { return document.getElementById(id); }
   function esc(s) {
     return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
   function isDraft(status) {
     return typeof status === "string" && /^DRAFT/i.test(status);
@@ -448,6 +448,7 @@
     if (!lightbox) {
       lightbox = document.createElement("dialog");
       lightbox.className = "lightbox";
+      lightbox.setAttribute("aria-label", "Award certificate");
       lightbox.innerHTML =
         '<button type="button" class="lightbox__close" aria-label="Close">&times;</button>' +
         '<img class="lightbox__img" alt="" />';
