@@ -417,8 +417,15 @@
      as a link or a status. */
   function awardItem(a) {
     var meta = [a.body, newsDate(a.date)].filter(Boolean).map(esc).join(" · ");
+    var thumb = newsThumb(a);
+    if (a.image && a.image_full) {
+      thumb = '<button type="button" class="news-item__zoom" data-full="' + esc(a.image_full) +
+        '" data-alt="' + esc(a.image_alt || a.award || "") +
+        '" aria-label="Enlarge certificate: ' + esc(a.award || "") + '">' + thumb +
+        '<span class="news-item__zoom-hint" aria-hidden="true">Enlarge</span></button>';
+    }
     return '<div class="news-item news-item--award">' +
-      newsThumb(a) +
+      thumb +
       '<div class="news-item__body">' +
         '<p class="news-item__kind">Award</p>' +
         '<p class="news-item__headline">' + esc(a.award) + '</p>' +
@@ -431,6 +438,33 @@
   // ISO dates sort correctly as plain strings; newest first.
   function byDateDesc(a, b) {
     return String(b.date).localeCompare(String(a.date));
+  }
+
+  /* Click-to-enlarge for award certificates. One <dialog> is built on first
+     use; ESC, the close button, or a click on the backdrop closes it, and
+     focus returns to the thumbnail that opened it. No external requests. */
+  var lightbox = null, lightboxOpener = null;
+  function openLightbox(btn) {
+    if (!lightbox) {
+      lightbox = document.createElement("dialog");
+      lightbox.className = "lightbox";
+      lightbox.innerHTML =
+        '<button type="button" class="lightbox__close" aria-label="Close">&times;</button>' +
+        '<img class="lightbox__img" alt="" />';
+      document.body.appendChild(lightbox);
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox || e.target.classList.contains("lightbox__close")) lightbox.close();
+      });
+      lightbox.addEventListener("close", function () {
+        if (lightboxOpener) lightboxOpener.focus();
+      });
+    }
+    var img = lightbox.querySelector(".lightbox__img");
+    img.src = btn.getAttribute("data-full");
+    img.alt = btn.getAttribute("data-alt") || "";
+    lightboxOpener = btn;
+    if (typeof lightbox.showModal === "function") lightbox.showModal();
+    else window.open(btn.getAttribute("data-full"), "_blank", "noopener");
   }
 
   /* `layout` in news.json picks how awards and press share the page:
@@ -463,6 +497,10 @@
             '<div class="news-list">' + press.map(newsItem).join("") + '</div></section>'
           : "");
     }
+    wrap.addEventListener("click", function (e) {
+      var btn = e.target.closest ? e.target.closest(".news-item__zoom") : null;
+      if (btn) openLightbox(btn);
+    });
     reveal(wrap);
   }
 

@@ -1,5 +1,5 @@
 {
-  "note": "Press coverage shown on news.html, grouped one entry per paper. To add coverage of a new paper, copy an entry anywhere in the array — the renderer sorts by date, newest first. Required: `date` (YYYY-MM, the paper's issue date from the CV — it renders as the tail of a citation, not as the press date) and `headline` (written in English; the site is English-only). Optional: `related` (the journal name), `image` (the paper's TOC figure under assets/news/) with `image_alt` describing the graphic, and `thumb` (text for a generated tile when there is no image, e.g. \"ACS Nano\" renders as ACS over NANO). Each entry in `outlets` needs `name` and `url`; add `kind`: \"video\" for broadcast segments. (`language` is also supported but deliberately unused — labelling the Korean articles was dropped.) To add one more outlet to a paper already listed, just append to its `outlets` array. Awards go in `awards`: each needs `date` (YYYY-MM, the award date), `award` (the prize name, as in profile.json honors_awards) and `body` (the awarding society); `detail`, `image` (the certificate under assets/news/, a 320px copy) and `image_alt` are optional. Top-level `layout` is \"grouped\" (default: awards and press as two sections) or \"mixed\" (one list by date).",
+  "note": "Press coverage shown on news.html, grouped one entry per paper. To add coverage of a new paper, copy an entry anywhere in the array — the renderer sorts by date, newest first. Required: `date` (YYYY-MM, the paper's issue date from the CV — it renders as the tail of a citation, not as the press date) and `headline` (written in English; the site is English-only). Optional: `related` (the journal name), `image` (the paper's TOC figure under assets/news/) with `image_alt` describing the graphic, and `thumb` (text for a generated tile when there is no image, e.g. \"ACS Nano\" renders as ACS over NANO). Each entry in `outlets` needs `name` and `url`; add `kind`: \"video\" for broadcast segments. (`language` is also supported but deliberately unused — labelling the Korean articles was dropped.) To add one more outlet to a paper already listed, just append to its `outlets` array. Awards go in `awards`: each needs `date` (YYYY-MM, the award date), `award` (the prize name, as in profile.json honors_awards) and `body` (the awarding society); `detail`, `image` (the certificate under assets/news/, a 320px copy), `image_full` (a larger copy under assets/news/full/, about 1400px, opened when the thumbnail is clicked) and `image_alt` are optional. Top-level `layout` is \"grouped\" (default: awards and press as two sections) or \"mixed\" (one list by date).",
   "layout": "grouped",
   "awards": [
     {
@@ -7,14 +7,16 @@
       "award": "KBMES Rising Star Award",
       "body": "Korean-American Biomedical Engineering Society",
       "image": "assets/news/award-2026-kbmes-rising-star.png",
-      "image_alt": "KBMES Rising Star Award plaque from the Korean-American Biomedical Engineering Society, October 2026."
+      "image_alt": "KBMES Rising Star Award plaque from the Korean-American Biomedical Engineering Society, October 2026.",
+      "image_full": "assets/news/full/award-2026-kbmes-rising-star.jpg"
     },
     {
       "date": "2026-10",
       "award": "PSK-INNOX Early Career Researcher Award",
       "body": "Polymer Society of Korea",
       "image": "assets/news/award-2026-psk-innox.png",
-      "image_alt": "Certificate of the PSK-INNOX Early Career Researcher Award from the Polymer Society of Korea, October 2026."
+      "image_alt": "Certificate of the PSK-INNOX Early Career Researcher Award from the Polymer Society of Korea, October 2026.",
+      "image_full": "assets/news/full/award-2026-psk-innox.jpg"
     },
     {
       "date": "2025-11",
@@ -22,7 +24,53 @@
       "body": "Korean American Society in Biotech and Pharmaceuticals",
       "detail": "2025 Fall KASBP Symposium",
       "image": "assets/news/award-2025-kasbp-fellowship.png",
-      "image_alt": "KASBP-Daewoong Fellowship Award certificate, November 2025."
+      "image_alt": "KASBP-Daewoong Fellowship Award certificate, November 2025.",
+      "image_full": "assets/news/full/award-2025-kasbp-fellowship.jpg"
+    },
+    {
+      "date": "2022-11",
+      "award": "Best Oral Presentation Award",
+      "body": "Korean Association of Immunologists",
+      "detail": "KAI International Meeting 2022",
+      "image": "assets/news/award-2022-kai-best-oral.png",
+      "image_full": "assets/news/full/award-2022-kai-best-oral.jpg",
+      "image_alt": "Best Oral Presentation Award certificate from the Korean Association of Immunologists, KAI International Meeting 2022, November 2022."
+    },
+    {
+      "date": "2021-11",
+      "award": "Academic Award",
+      "body": "KAIST Life Science Research Institute",
+      "detail": "2021 Postdoctoral Symposium",
+      "image": "assets/news/award-2021-kaist-academic.png",
+      "image_full": "assets/news/full/award-2021-kaist-academic.jpg",
+      "image_alt": "Academic Award certificate from the KAIST Life Science Research Institute Postdoctoral Symposium, November 2021."
+    },
+    {
+      "date": "2020-10",
+      "award": "Excellent Poster Award",
+      "body": "Korean Society for Molecular and Cellular Biology",
+      "detail": "2020 KSMCB International Conference",
+      "image": "assets/news/award-2020-ksmcb-poster.png",
+      "image_full": "assets/news/full/award-2020-ksmcb-poster.jpg",
+      "image_alt": "Excellent Poster Award certificate from the Korean Society for Molecular and Cellular Biology International Conference, October 2020."
+    },
+    {
+      "date": "2018-11",
+      "award": "Outstanding Poster Presentation Award",
+      "body": "BTDS, KSMI, and Korean Society for Nanomedicine",
+      "detail": "1st BTDS–KSMI–KSNM Integration Event",
+      "image": "assets/news/award-2018-btds-poster.png",
+      "image_full": "assets/news/full/award-2018-btds-poster.jpg",
+      "image_alt": "Best Poster Award certificate from the 2018 BTDS–KSMI–KSNM Integration Event, November 2018."
+    },
+    {
+      "date": "2017-11",
+      "award": "Outstanding Poster Presentation Award",
+      "body": "Korean Society for Nanomedicine",
+      "detail": "5th Annual Meeting",
+      "image": "assets/news/award-2017-ksnm-poster.png",
+      "image_full": "assets/news/full/award-2017-ksnm-poster.jpg",
+      "image_alt": "Poster award certificate from the 5th Annual Meeting of the Korean Society for Nanomedicine, November 2017."
     }
   ],
   "press": [
